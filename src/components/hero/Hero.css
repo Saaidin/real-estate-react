@@ -1,96 +1,58 @@
 .hero {
-    background-color: rgba(0,0,0,.5);
-    color: #fff;
-    height: 80vh;
-    width: 100%;
-    position: relative;
-    margin-bottom: 4rem;
+    @apply bg-black-rgba-1 text-[#fff] h-[80vh] w-full relative mb-[4rem];
 }
 
 .hero:before {
-    content: '';
-    background: url('../../assets/hero-img.jpg') no-repeat center center/cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    @apply content-[''] bg-hero-bgi-1 bg-white-rgba-2 bg-no-repeat bg-center bg-cover h-full w-full absolute top-0 left-0 z-[-1];
 }
 
 .hero .content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    max-width: 700px;
-    margin: auto;
-    padding: 1rem;
+    @apply h-full flex flex-col justify-center text-center max-w-[700px] m-auto p-[1rem];
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    text-transform: capitalize;
+    @apply text-[3.5rem] capitalize;
 }
 
 .hero .search-text {
-    margin: 1.5rem;
-    font-size: 1.4rem;
+    @apply m-[1.5rem] text-[1.4rem];
 }
 
 .search {
-    display: flex;
-    background-color: #fff;
-    color: #333;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 4px;
-    border-radius: 8px;
+    @apply flex bg-[#fff] text-[#333] justify-between items-center border border-solid border-[#ccc] p-[4px] rounded-[8px];
 }
 
 .search input[type=text] {
-    border: transparent;
-    background-color: transparent;
-    width: 400px;
-    font-size: 1.2rem;
-    font-family: 'Raleway', sans-serif;
+    @apply border-transparent bg-transparent w-[400px] text-[1.2rem] font-raleway-1;
 }
 
 .search input[type=text]:focus {
-    outline: none;
+    @apply outline-none;
 }
 
 .search label {
-    padding: 0 14px 0 8px;
+    @apply py-0 pr-[14px] pl-[8px];
 }
 
 .search .radio {
-    display: flex;
-    align-items: center;
+    @apply flex items-center;
 }
 
 .search button {
-    background-image: linear-gradient(45deg, #5651e5 0%, #709dff 100%);
-    border: 1px solid #5651e5;
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
+    @apply bg-hero-bgi-2 border border-solid border-[#5651e5] text-[#fff] p-[10px] rounded-[8px] cursor-pointer;
 }
 
 @media screen and (max-width: 940px) {
     .hero {
-        height: 70vh;
+        @apply h-[70vh];
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        @apply text-[2.5rem];
     }
 
     .search input[type=text] {
-        width: 100%;
+        @apply w-full;
     }
 }
 

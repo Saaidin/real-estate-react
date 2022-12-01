@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -14,8 +18,6 @@ a {
   text-decoration: none;
   color: #333;
 }
-
-
 
 body {
   margin: 0;
@@ -42,8 +44,16 @@ body {
   cursor: pointer;
 }
 
-.btn:ative {
+.btn:active {
   transform: translate(4px);
   box-shadow: 0px 0px 1px rgba(0,0,0,0,.2);
   border-bottom:none;
+}
+
+h1 {
+  @apply block text-[2em] text-center my-[1rem] mx-0 font-bold capitalize;
+}
+
+h3 {
+  @apply block text-[20px] text-center my-[1rem] mx-0 font-bold capitalize;
 }

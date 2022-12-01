@@ -1,53 +1,44 @@
 .best {
-    width: 100%;
-    margin: 4rem 0;
-    text-align: center;
+    @apply w-full my-[4rem] mx-0 text-center;
 }
 
 .best > div {
-    display: flex;
-    justify-content: center;
+    @apply flex justify-center;
 }
 
 .best > div p {
-    margin: 1rem 2rem;
-    font-size: 1.2rem;
+    @apply my-[1rem] mx-[2rem] text-[1.2rem];
 }
 
 .bold {
-    font-weight: 700;
+    @apply font-[700];
 }
 
 .best .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.2rem;
-    padding: 1rem;
+    @apply grid grid-cols-3 gap-[1.2rem] p-[1rem];
 }
 
 .best img {
-    width: 100%;
+    @apply w-full;
 }
 
 @media screen and (max-width:940px) {
     .best {
-        margin: 1rem 0;
+        @apply my-[1rem] mx-0;
     }
 
     .best > div p {
-        margin: 1rem;
-        font-size: 1rem;
+        @apply m-[1rem] text-[1rem];
     }
 
     .best .container {
-        grid-template-columns: 1fr;
-        grid-gap: .5rem;
+        @apply grid-cols-1 gap-[0.5rem];
     }
 }
 
 @media screen and (max-width: 478px) {
     .best > div p {
-        margin: 1rem .5rem;
+        @apply my-[1rem] mx-[0.5rem];
     }
 }
 

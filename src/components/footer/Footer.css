@@ -1,44 +1,37 @@
 .footer {
-    width: 100%;
-    padding: 2rem 0;
-    background-color: #f8f8f8;
+    @apply w-full py-[2rem] px-0 bg-[#f8f8f8];
 }
 
 .footer .container {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1.2rem;
+    @apply grid grid-cols-4 gap-[1.2rem];
 }
 
 .footer .col {
-    margin: auto;
+    @apply m-auto;
 }
 
 .footer h3 {
-    margin: .8rem 0
+    @apply my-[0.8rem] mx-0;
 }
 
 .footer p {
-    margin: .4rem 0;
+    @apply my-[0.4rem] mx-0;
 }
 
 .footer .social {
-    text-align: center;
+    @apply text-center;
 }
 
 .footer .icon {
-    font-size: 2rem;
-    margin: 2rem 3rem;
-    color: #5651e5;
+    @apply text-[2rem] my-[2rem] mx-[3rem] text-[#5651e5];
 }
 
 @media screen and (max-width: 940px) {
     .footer .container {
-        grid-template-columns: repeat(2,1fr);
-        gap: .5rem;
+        @apply grid-cols-2 gap-[0.5rem];
     }
 
     .footer .icon {
-        margin: 1rem;
+        @apply m-[1rem];
     }
 }
